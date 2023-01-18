@@ -36,17 +36,19 @@ def bubble_sort(arr):
 
 
 def unbubble_sort(arr):
-    n = len(arr)
+    # n = len(arr)
     for i in arr:
         indx = arr.index(i)
+        print("I'm the element: " + str(i))
         for t in arr:
             indx_t = arr.index(t)
             if arr[indx] >= arr[indx_t]:
                 break
             else:
-                print("ayay")
-                print(i)
-                print(t)
+                print(str(i) + "is the smallest item in the array and am deleted now")
+                arr_result.append(arr[indx])
+                del arr[indx]
+                print(arr_result)
             print("i'm done")
             break
 
