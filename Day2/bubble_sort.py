@@ -49,15 +49,9 @@ def unbubble_sort(arr):
             indx_t = arr.index(t)
             if min > arr[indx_t]:
                 min = t
-            # else:
-            #     print(str(i) + "is the smallest item in the array and am deleted now")
-            #     arr_result.append(arr[indx])
-            #     del arr[indx]
-            #     print(arr_result)
-            # print("i'm done")
         print(min)
         arr.pop(arr.index(min))
-        # print(arr)
+        print(arr)
 
 
         
