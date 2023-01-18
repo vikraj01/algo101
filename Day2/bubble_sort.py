@@ -1,7 +1,10 @@
 import time
-def mili():
-        return int(round(time.time() * 1000))
+from line_profiler import LineProfiler
 
+
+arr = [23, 28, 1, 83, 9, 82, 12, 90, 89, 23, 76, 11]
+
+# First approach to sort the arr list
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n-1):
@@ -10,16 +13,23 @@ def bubble_sort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 
+# Create an instance of the LineProfiler
+lp = LineProfiler()
+
+# Add the function to be profiled
+lp.add_function(bubble_sort)
+
+# Run the profiler
+lp.run('bubble_sort(arr)')
+
+# Print the results
+lp.print_stats()
 
 
 
-arr = [23, 28, 1, 83, 9, 82, 12, 90, 89, 23, 76, 11]
-
-start_time = mili()
-print(bubble_sort(arr))
-print(mili() - start_time)
 
 
+# Explanation:
 # 2 23 12 1 9
 
 
