@@ -1,8 +1,10 @@
 import time
 from line_profiler import LineProfiler
 
-
-arr = [23, 28, 1, 83, 9, 82, 12, 90, 89, 23, 76, 11]
+from randomArray import createRandomArray
+# arr = [23, 28, 1, 83, 9, 82, 12, 90, 89, 23, 76, 11]
+temp = createRandomArray(1000, 1, 10000)
+arr = temp
 arr_result = []
 
 
@@ -22,42 +24,51 @@ def bubble_sort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 
-# # Create an instance of the LineProfiler
-# lp = LineProfiler()
+# Create an instance of the LineProfiler
+lp1 = LineProfiler()
 
-# # Add the function to be profiled
-# lp.add_function(bubble_sort)
+# Add the function to be profiled
+lp1.add_function(bubble_sort)
 
-# # Run the profiler
-# lp.run('bubble_sort(arr)')
+# Run the profiler
+lp1.run('bubble_sort(arr)')
 
-# # Print the results
-# lp.print_stats()
+# Print the results
+lp1.print_stats()
 
 
 
 # 23 12 2 9 1
 
-arr = [23, 12, 87, 2 ,9, 1]
+
+# arr = [23, 28, 1, 83, 9, 82, 12, 90, 89, 23, 76, 11]
+arr = temp
 def unbubble_sort(arr):
-    # n = len(arr)
     while len(arr):
         for i in arr:
-            # print(i)
             indx = arr.index(i)
-            # print("I'm the element: " + str(i))
             min = i
             for t in arr:
                 indx_t = arr.index(t)
                 if min > arr[indx_t]:
                     min = t
-            print(min)
-            arr.pop(arr.index(min))
-            # print(arr)
+            arr_result.append(arr.pop(arr.index(min))) 
+    arr = arr_result
+    return arr
 
 
-        
-unbubble_sort(arr)
+# Create an instance of the LineProfiler
+lp = LineProfiler()      
+
+# Add the function to be profiled
+lp.add_function(unbubble_sort)
+
+# Run the profiler
+lp.run('unbubble_sort(arr)')
+
+# Print the results
+lp.print_stats()
+
 # Explanation:
 # 2 23 12 1 9
 
