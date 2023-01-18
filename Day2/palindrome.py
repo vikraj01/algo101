@@ -8,3 +8,5 @@ def palindrome(n):
 
 
 print(palindrome(8827283))
+
+# 121 2332
