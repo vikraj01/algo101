@@ -41,8 +41,14 @@ def unbubble_sort(arr):
         indx = arr.index(i)
         for t in arr:
             indx_t = arr.index(t)
-            if arr[indx] > arr[indx_t]:
+            if arr[indx] >= arr[indx_t]:
                 break
+            else:
+                print("ayay")
+                print(i)
+                print(t)
+            print("i'm done")
+            break
 
 
         
