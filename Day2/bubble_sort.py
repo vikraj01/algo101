@@ -38,10 +38,11 @@ def bubble_sort(arr):
 
 # 23 12 2 9 1
 
-arr = [23, 12, 2 ,9, 1]
+arr = [23, 12, 87, 2 ,9, 1]
 def unbubble_sort(arr):
     # n = len(arr)
     for i in arr:
+        print(i)
         indx = arr.index(i)
         # print("I'm the element: " + str(i))
         min = i
