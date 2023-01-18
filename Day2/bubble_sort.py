@@ -40,15 +40,20 @@ def bubble_sort(arr):
 
 arr = [23, 12, 87, 2 ,9, 1]
 def unbubble_sort(arr):
-    for i in arr:
-        print(i)
-        min = i
-        for t in arr:
-            if min > t:
-                min = t
-        print(min)
-        arr.pop(arr.index(min))
-        print(arr)
+    # n = len(arr)
+    while len(arr):
+        for i in arr:
+            # print(i)
+            indx = arr.index(i)
+            # print("I'm the element: " + str(i))
+            min = i
+            for t in arr:
+                indx_t = arr.index(t)
+                if min > arr[indx_t]:
+                    min = t
+            print(min)
+            arr.pop(arr.index(min))
+            # print(arr)
 
 
         
