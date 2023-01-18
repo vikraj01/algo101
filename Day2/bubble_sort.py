@@ -35,22 +35,29 @@ def bubble_sort(arr):
 # lp.print_stats()
 
 
+
+# 23 12 2 9 1
+
+arr = [23, 12, 2 ,9, 1]
 def unbubble_sort(arr):
     # n = len(arr)
     for i in arr:
         indx = arr.index(i)
-        print("I'm the element: " + str(i))
+        # print("I'm the element: " + str(i))
+        min = i
         for t in arr:
             indx_t = arr.index(t)
-            if arr[indx] >= arr[indx_t]:
-                break
-            else:
-                print(str(i) + "is the smallest item in the array and am deleted now")
-                arr_result.append(arr[indx])
-                del arr[indx]
-                print(arr_result)
-            print("i'm done")
-            break
+            if min > arr[indx_t]:
+                min = t
+            # else:
+            #     print(str(i) + "is the smallest item in the array and am deleted now")
+            #     arr_result.append(arr[indx])
+            #     del arr[indx]
+            #     print(arr_result)
+            # print("i'm done")
+        print(min)
+        arr.pop(arr.index(min))
+        # print(arr)
 
 
         
