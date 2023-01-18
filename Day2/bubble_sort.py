@@ -3,6 +3,15 @@ from line_profiler import LineProfiler
 
 
 arr = [23, 28, 1, 83, 9, 82, 12, 90, 89, 23, 76, 11]
+arr_result = []
+
+
+# pass 1
+# 23, 28, 1, 83, 9, 82, 12, 90, 89, 23, 76, 11
+# 23, 28, 1, 83, 9, 82, 12, 90, 89, 23, 76, 11
+# 23, 28, 1, 83, 9, 82, 12, 90, 89, 23, 76, 11
+    # 1 -> to new list
+    # latest version of old list: 23, 28, 83, 9, 82, 12, 90, 89, 23, 76, 11
 
 # First approach to sort the arr list
 def bubble_sort(arr):
@@ -13,22 +22,33 @@ def bubble_sort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 
-# Create an instance of the LineProfiler
-lp = LineProfiler()
+# # Create an instance of the LineProfiler
+# lp = LineProfiler()
 
-# Add the function to be profiled
-lp.add_function(bubble_sort)
+# # Add the function to be profiled
+# lp.add_function(bubble_sort)
 
-# Run the profiler
-lp.run('bubble_sort(arr)')
+# # Run the profiler
+# lp.run('bubble_sort(arr)')
 
-# Print the results
-lp.print_stats()
-
-
+# # Print the results
+# lp.print_stats()
 
 
+def unbubble_sort(arr):
+    n = len(arr)
+    for i in arr:
+        indx = arr.index(i)
+        print(arr[indx])
 
+        for t in range(n-1):
+            if 
+            indx_t = arr.index(i)
+
+            if arr[indx] < arr[indx_t]:
+                pass
+            else
+unbubble_sort(arr)
 # Explanation:
 # 2 23 12 1 9
 
