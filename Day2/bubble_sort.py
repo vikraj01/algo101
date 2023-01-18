@@ -39,15 +39,13 @@ def unbubble_sort(arr):
     n = len(arr)
     for i in arr:
         indx = arr.index(i)
-        print(arr[indx])
+        for t in arr:
+            indx_t = arr.index(t)
+            if arr[indx] > arr[indx_t]:
+                break
 
-        for t in range(n-1):
-            if 
-            indx_t = arr.index(i)
 
-            if arr[indx] < arr[indx_t]:
-                pass
-            else
+        
 unbubble_sort(arr)
 # Explanation:
 # 2 23 12 1 9
